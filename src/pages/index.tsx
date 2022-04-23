@@ -17,8 +17,8 @@ function useHook() {
 const Index: FC = () => {
   useHook();
   return (
-    <div className="bg-indigo-100 h-screen flex items-center justify-center flex-col space-y-5">
-      <section className="w-96  aspect-[9/19] bg-pastel rounded-[2rem] flex flex-col space-y-32 overflow-clip shadow-all overflow-y-auto scrollbar-hide">
+    <div className="bg-indigo-100 min-h-screen flex items-center justify-center flex-col space-y-5">
+      <section className="w-96 aspect-[9/19] max-h-screen bg-pastel rounded-[2rem] flex flex-col space-y-32 overflow-clip shadow-all overflow-y-auto scrollbar-hide">
         <header className="mt-4 px-4 flex justify-between">
           <button className="w-12 flex items-center justify-center aspect-square bg-white rounded-full shadow-lg">
             <Icon_ArrowLeft />
@@ -68,6 +68,23 @@ const Index: FC = () => {
               <span>Photos</span>
               <span>Videos</span>
             </header>
+            {/* Image-grid */}
+            <main className="bg-white shadow-md w-full p-2 rounded-[2rem]">
+              <div className="rounded-[2rem] flex flex-col overflow-clip w-full aspect-square space-y-2">
+                <div className="h-[58%] flex space-x-2">
+                  <Image className="aspect-square" alt="" />
+                  <div className="flex-1 flex flex-col space-y-2">
+                    <Image className="flex-1" alt="" />
+                    <Image className="flex-1" alt="" />
+                  </div>
+                </div>
+                <div className="flex-1 flex space-x-2">
+                  <Image className="flex-1" alt="" />
+                  <Image className="flex-1" alt="" />
+                  <Image className="flex-1" alt="" />
+                </div>
+              </div>
+            </main>
             <main className="bg-white shadow-md w-full p-2 rounded-[2rem]">
               <div className="rounded-[2rem] flex flex-col overflow-clip w-full aspect-square space-y-2">
                 <div className="h-[58%] flex space-x-2">
