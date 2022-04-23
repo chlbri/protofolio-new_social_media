@@ -48,6 +48,7 @@ specifiers:
   react-dom: ^18.0.0
   react-test-renderer: ^17.0.2
   shelljs: ^0.8.5
+  tailwind-scrollbar-hide: ^1.1.7
   tailwind-styled-components: ^2.1.7
   tailwindcss: ^3.0.24
   ts-jest: ^27.1.4
@@ -69,6 +70,7 @@ dependencies:
   next: 12.1.5_react-dom@18.0.0+react@18.0.0
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
+  tailwind-scrollbar-hide: 1.1.7
   tailwind-styled-components: 2.1.7_react-dom@18.0.0+react@18.0.0
   xstate: 4.31.0
   zod: 3.14.4
@@ -6420,6 +6422,10 @@ packages:
     resolution: {integrity: sha512-kWfy/u91XoE408Kb42HQd1krdiZjw2sbSWjE1C/lXXXsbK+6dhTpnd37DHrwNP6ofKj5/HKXlY/jTjPYgPxSsw==}
     dependencies:
       hashlru: 2.3.0
+    dev: false
+
+  /tailwind-scrollbar-hide/1.1.7:
+    resolution: {integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==}
     dev: false
 
   /tailwind-styled-components/2.1.7_react-dom@18.0.0+react@18.0.0:

@@ -18,7 +18,7 @@ const Index: FC = () => {
   useHook();
   return (
     <div className="bg-indigo-100 h-screen flex items-center justify-center">
-      <section className="w-96  aspect-[9/19] bg-pastel rounded-[2rem] flex flex-col space-y-32 overflow-clip shadow-all">
+      <section className="w-96  aspect-[9/19] bg-pastel rounded-[2rem] flex flex-col space-y-32 overflow-clip shadow-all overflow-y-auto scrollbar-hide">
         <header className="mt-4 px-4 flex justify-between">
           <button className="w-12 flex items-center justify-center aspect-square bg-white rounded-full shadow-lg">
             <Icon_ArrowLeft />
@@ -30,7 +30,7 @@ const Index: FC = () => {
             <Icon_Mail filled="currentColor" width={1.8} />
           </button>
         </header>
-        <main className="flex-grow bg-gradient-to-b from-blue-100/90 to-white/90 rounded-t-[2rem] flex flex-col items-center space-y-4 backdrop-blur-md ">
+        <main className="flex-grow bg-gradient-to-b from-blue-100/90 to-white/70 rounded-t-[2rem] flex flex-col items-center space-y-4 backdrop-blur-md ">
           <div className="w-3/4 space-y-3">
             <header className="flex justify-between pt-3">
               <div className="flex flex-col items-center text-sm">
@@ -68,8 +68,8 @@ const Index: FC = () => {
               <span>Photos</span>
               <span>Videos</span>
             </header>
-            <main className="flex-1 bg-white shadow-md w-full p-2 rounded-t-[2rem]">
-              <div className="rounded-[2rem] flex flex-col overflow-clip w-full h-full space-y-2">
+            <main className="bg-white shadow-md w-full p-2 rounded-[2rem]">
+              <div className="rounded-[2rem] flex flex-col overflow-clip w-full aspect-square space-y-2">
                 <div className="h-[58%] flex space-x-2">
                   <Image className="aspect-square" alt="" />
                   <div className="flex-1 flex flex-col space-y-2">
@@ -82,14 +82,6 @@ const Index: FC = () => {
                   <Image className="flex-1" alt="" />
                   <Image className="flex-1" alt="" />
                 </div>
-                {/* <div className="bg-gray-500 col-span-3 row-span-3"></div>
-                <div className="flex flex-col col-span-3 row-span-3 gap-2">
-                  <div className="flex-1 bg-gray-500"></div>
-                  <div className="flex-1 bg-gray-500"></div>
-                </div>
-                <div className="bg-gray-500 col-span-2 row-span-3"></div>
-                <div className="bg-gray-500 col-span-2 row-span-3"></div>
-                <div className="bg-gray-500 col-span-2 row-span-3"></div> */}
               </div>
             </main>
           </section>
