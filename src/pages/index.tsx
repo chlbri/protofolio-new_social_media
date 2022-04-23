@@ -17,7 +17,7 @@ function useHook() {
 const Index: FC = () => {
   useHook();
   return (
-    <div className="bg-indigo-100 h-screen flex items-center justify-center">
+    <div className="bg-indigo-100 h-screen flex items-center justify-center flex-col space-y-5">
       <section className="w-96  aspect-[9/19] bg-pastel rounded-[2rem] flex flex-col space-y-32 overflow-clip shadow-all overflow-y-auto scrollbar-hide">
         <header className="mt-4 px-4 flex justify-between">
           <button className="w-12 flex items-center justify-center aspect-square bg-white rounded-full shadow-lg">
@@ -87,6 +87,17 @@ const Index: FC = () => {
           </section>
         </main>
       </section>
+      <div className="italic">
+        Template From :
+        <a
+          className="font-bold border-b-2 border-indigo-500"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHpNLXVja1dQWUN3VUE4azh1T3oxUnRRZWM3d3xBQ3Jtc0traGN0QUVtNUZzZVdHVEhZeTl4RU1DaW4tLWxfN3dBTkx6d3ZkTnczWmQ4Zi0tNzhVQnVLVmdETnFQZnpqTERib0VvYkJHS3JLNUNaeEFwVURYWVlqU0NqOW82SnZjd0NIS2xhSkxNOTV1QmV4dHhJMA&q=https%3A%2F%2Fwww.figma.com%2Fcommunity%2Ffile%2F1096790122416342536%2FSocial-Media-App&v=qiW2qKVGT6k"
+        >
+          {' design-code'}
+        </a>
+      </div>
     </div>
   );
 };
