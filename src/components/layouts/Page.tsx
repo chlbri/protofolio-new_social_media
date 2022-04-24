@@ -8,9 +8,9 @@ type Props = {
 
 export const Page: FC<Props> = ({ children, className }) => {
   return (
-    <div className="bg-indigo-100 min-h-screen flex items-center justify-center flex-col space-y-5 p-3">
+    <div className="bg-indigo-100 h-screen flex items-center justify-center flex-col space-y-3 pt-5">
       <Phone className={className}>{children}</Phone>
-      <div className="italic flex flex-col space-y-2 items-center text-lg">
+      <div className="italic flex flex-col space-y-0.5 items-center text-lg flex-grow justify-center">
         <span>
           <span>Template From :</span>
           <a
