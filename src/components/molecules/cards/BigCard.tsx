@@ -21,12 +21,12 @@ export const BigCard: FC<Props> = ({
   pseudo = '@JaneJ01',
 }) => {
   return (
-    <div className="last:pb-[100%]">
-      <div className="rounded-[2rem] bg-slate-200 flex flex-col py-2 px-2 space-y-3 ">
+    <div className="last:pb-[70%]">
+      <div className="rounded-[2rem] bg-slate-200 flex flex-col py-2 px-2 space-y-3 overflow-hidden">
         <header className="flex space-x-3 pl-2">
           <Image
-            alt=""
-            className="w-10 h-10 rounded-full overflow-clip"
+            alt="dss"
+            className="w-10 h-10 rounded-full overflow-hidden relative"
             src={profileImage}
           />
           <div className="flex flex-col">
@@ -34,10 +34,10 @@ export const BigCard: FC<Props> = ({
             <span className="text-sm text-gray-500">{pseudo}</span>
           </div>
         </header>
-        <main className="relative">
+        <main className="relative overflow-hidden">
           <Image
             alt=""
-            className="w-full aspect-[3/2] rounded-[2rem] overflow-clip"
+            className="w-full aspect-[3/2] rounded-[2rem] overflow-hidden"
             src={lastPhoto}
           />
           <div className="absolute inset-x-6 bottom-2 text-white flex justify-between text-sm z-20">

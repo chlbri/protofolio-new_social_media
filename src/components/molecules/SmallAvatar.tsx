@@ -21,12 +21,12 @@ export const SmallAvatar: FC<Props> = ({ src, me, name = 'Aida' }) => {
   return (
     <div className="inline-block gap-3 w-16">
       <button
-        className="relative border-2 border-blue-500 rounded-full p-0.5 overflow-clip w-full"
+        className="relative border-2 border-blue-500 rounded-full p-0.5 overflow-hidden w-full"
         onClick={handlePersonClick}
       >
         <Image
           alt=""
-          className="w-full aspect-square rounded-full overflow-clip"
+          className="w-full aspect-square rounded-full overflow-hidden"
           src={src}
         />
         {me && (

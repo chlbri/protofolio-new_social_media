@@ -25,7 +25,7 @@ function useHook() {
 const Index: FC = () => {
   useHook();
   return (
-    <Page className="space-y-5 pb-3 bg-white relative flex flex-col py-2">
+    <Page className="space-y-5 pb-3 bg-white relative flex flex-col py-2 overflow-hidden">
       <div className="flex px-7 text-sm justify-between ">
         <span className="font-medium">9:41</span>
         <div className="flex space-x-1 items-center">
@@ -44,8 +44,8 @@ const Index: FC = () => {
         </button>
       </header>
 
-      <main className="w-11/12 mx-auto space-y-4 h-full">
-        <div className="space-x-4 overflow-auto whitespace-nowrap scrollbar-hide">
+      <main className="w-11/12 mx-auto space-y-4 h-full overflow-hidden">
+        <div className="space-x-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
           <SmallAvatar me />
           {Array.from({ length: 10 }).map((_, i) => (
             <SmallAvatar key={i} />
@@ -53,13 +53,13 @@ const Index: FC = () => {
         </div>
         <div className="w-full overflow-y-scroll scrollbar-hide rounded-[2rem] h-full">
           <div className="space-y-4 pt-2">
-            {Array.from({ length: 4 }).map((_, i) => (
+            {Array.from({ length: 10 }).map((_, i) => (
               <BigCard key={i} />
             ))}
           </div>
         </div>
       </main>
-      <footer className="absolute bottom-0 h-24 left-0 right-0 bg-indigo-300/60 backdrop-blur-xl flex z-30"></footer>
+      <footer className="absolute bottom-0 h-24 left-0 right-0 bg-indigo-300/60 backdrop-blur-xl flex rounded-b-[2rem]"></footer>
     </Page>
   );
 };
