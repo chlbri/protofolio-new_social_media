@@ -1,6 +1,14 @@
 /* eslint-disable react/jsx-key */
 import { FC, useEffect } from 'react';
-import { Icon_ArrowLeft, Icon_Mail, Image } from '../components/atoms';
+import {
+  Icon_Battery,
+  Icon_NetworkBars,
+  Icon_Notifications,
+  Icon_Photo,
+  Icon_Wifi,
+} from '../components/atoms';
+import { Page } from '../components/layouts';
+import { BigCard, SmallAvatar } from '../components/molecules';
 import { useSend } from '../Provider';
 
 function useStart() {
@@ -17,89 +25,42 @@ function useHook() {
 const Index: FC = () => {
   useHook();
   return (
-    <div className="bg-indigo-100 min-h-screen flex items-center justify-center flex-col space-y-5 p-3">
-      <section className="w-96 aspect-[9/19] max-h-[90%]  bg-pastel rounded-[2rem] flex flex-col space-y-32 overflow-clip shadow-all overflow-y-auto scrollbar-hide">
-        <header className="mt-4 px-4 flex justify-between">
-          <button className="w-12 flex items-center justify-center aspect-square bg-white rounded-full shadow-lg">
-            <Icon_ArrowLeft />
-          </button>
-          <button
-            className="w-12 flex items-center justify-center  bg-white rounded-full shadow-lg"
-            shadow-lg
-          >
-            <Icon_Mail filled="currentColor" width={1.8} />
-          </button>
-        </header>
-        <main className="flex-grow bg-gradient-to-b from-blue-100/90 to-white/70 rounded-t-[2rem] flex flex-col items-center space-y-4 backdrop-blur-md ">
-          <div className="w-3/4 space-y-3">
-            <header className="flex justify-between pt-3">
-              <div className="flex flex-col items-center text-sm">
-                <span className="font-semibold">1K</span>
-                <span className="text-xs">Followers</span>
-              </div>
-              <Image
-                alt="avatar"
-                className="rounded-full overflow-clip -mt-14 border-4 border-white w-24 aspect-square"
-              />
-              <div className="flex flex-col items-center text-sm">
-                <span className="font-semibold">342</span>
-                <span className="text-xs">Following</span>
-              </div>
-            </header>
-            <section className="flex flex-col items-center space-y-2">
-              <span>@chlbri</span>
-              <p className="text-center text-sm w-full text-slate-500">
-                My name is Charles-Lévi BRI, I like code and making good
-                stuffs.
-              </p>
-              <div className="w-11/12 flex space-x-5 text-sm">
-                <button className="shadow-lg flex-1 bg-blue-500 text-white rounded-full shadow-blue-300 ">
-                  Follow
-                </button>
-                <button className="shadow-lg flex-1 py-2 rounded-full bg-white ">
-                  Message
-                </button>
-              </div>
-            </section>
-          </div>
-          <section className="flex flex-col w-full items-center space-y-2 flex-grow">
-            <header className="w-1/2 flex justify-between text-xs">
-              <span className="border-b-4 px-1 border-gray-800">All</span>
-              <span>Photos</span>
-              <span>Videos</span>
-            </header>
-            {/* Image-grid */}
-            <main className="bg-white shadow-md w-full p-2 rounded-[2rem]">
-              <div className="rounded-[2rem] flex flex-col overflow-clip w-full aspect-square space-y-2">
-                <div className="h-[58%] flex space-x-2">
-                  <Image className="aspect-square" alt="" />
-                  <div className="flex-1 flex flex-col space-y-2">
-                    <Image className="flex-1" alt="" />
-                    <Image className="flex-1" alt="" />
-                  </div>
-                </div>
-                <div className="flex-1 flex space-x-2">
-                  <Image className="flex-1" alt="" />
-                  <Image className="flex-1" alt="" />
-                  <Image className="flex-1" alt="" />
-                </div>
-              </div>
-            </main>
-          </section>
-        </main>
-      </section>
-      <div className="italic">
-        Template From :
-        <a
-          className="font-bold border-b-2 border-indigo-500"
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHpNLXVja1dQWUN3VUE4azh1T3oxUnRRZWM3d3xBQ3Jtc0traGN0QUVtNUZzZVdHVEhZeTl4RU1DaW4tLWxfN3dBTkx6d3ZkTnczWmQ4Zi0tNzhVQnVLVmdETnFQZnpqTERib0VvYkJHS3JLNUNaeEFwVURYWVlqU0NqOW82SnZjd0NIS2xhSkxNOTV1QmV4dHhJMA&q=https%3A%2F%2Fwww.figma.com%2Fcommunity%2Ffile%2F1096790122416342536%2FSocial-Media-App&v=qiW2qKVGT6k"
-        >
-          {' design-code'}
-        </a>
+    <Page className="space-y-5 pb-3 bg-white relative flex flex-col py-2">
+      <div className="flex px-7 text-sm justify-between ">
+        <span className="font-medium">9:41</span>
+        <div className="flex space-x-1 items-center">
+          <Icon_NetworkBars filled="" width={1} />
+          <Icon_Wifi />
+          <Icon_Battery width={1.4} />
+        </div>
       </div>
-    </div>
+      <header className="w-11/12 mx-auto flex justify-between items-center">
+        <button className="w-12 flex items-center justify-center aspect-square bg-slate-300 rounded-full shadow-lg">
+          <Icon_Photo width={1.8} filled="" />
+        </button>
+        <span className="text-lg font-bold">Explore</span>
+        <button className="w-12 aspect-square flex items-center justify-center  bg-slate-300 rounded-full shadow-lg">
+          <Icon_Notifications width={1.8} filled="" />
+        </button>
+      </header>
+
+      <main className="w-11/12 mx-auto space-y-4 h-full">
+        <div className="space-x-4 overflow-auto whitespace-nowrap scrollbar-hide">
+          <SmallAvatar me />
+          {Array.from({ length: 10 }).map((_, i) => (
+            <SmallAvatar key={i} />
+          ))}
+        </div>
+        <div className="w-full overflow-y-scroll scrollbar-hide rounded-[2rem] h-full">
+          <div className="space-y-4 pt-2">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <BigCard key={i} />
+            ))}
+          </div>
+        </div>
+      </main>
+      <footer className="absolute bottom-0 h-24 left-0 right-0 bg-indigo-300/60 backdrop-blur-xl flex z-30"></footer>
+    </Page>
   );
 };
 

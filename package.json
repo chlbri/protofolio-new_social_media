@@ -27,7 +27,6 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "tailwind-styled-components": "^2.1.7",
     "xstate": "^4.31.0",
     "zod": "^3.14.4",
     "zustand": "^3.7.2"
@@ -50,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "autoprefixer": "^10.4.4",
+    "tailwind-styled-components": "^2.1.7",
     "edit-json-file": "^1.7.0",
     "eslint": "^8.14.0",
     "eslint-config-next": "^12.1.5",
