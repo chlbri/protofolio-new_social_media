@@ -89,10 +89,10 @@ const Message: FC = () => {
               <div className="bg-blue-500 p-3 rounded-full">
                 <Icon_Photo filled="" className="fill-white" />
               </div>
-              <div className="bg-white rounded-full flex space-x-2 pl-5 flex-grow justify-center">
+              <div className="bg-white rounded-full flex space-x-2 pl-5 flex-grow justify-between">
                 <input
                   type="text"
-                  className="hover:outline-none focus:outline-none bg-transparent flex-grow"
+                  className="hover:outline-none focus:outline-none bg-transparent w-36 2xl:flex-grow"
                 />
                 <div className="bg-blue-500 p-3 rounded-full max-w">
                   <Icon_SendMessage />

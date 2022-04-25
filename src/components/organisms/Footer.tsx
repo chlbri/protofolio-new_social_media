@@ -39,7 +39,7 @@ export const Footer: FC = () => {
               <Icon_Tchat filled="white" width={BTN_WIDTH} />
             </Btn>
           </div>
-          <button className="absolute -top-10 w-20 inset-x-auto h-20 rounded-full overflow-hidden bg-white/40 backdrop-blur-md text-blue-900 flex justify-center items-center text-6xl font-black font-mono left-1/2 -translate-x-1/2">
+          <button className="absolute -top-10 w-[4.5rem] inset-x-auto h-[4.5rem] rounded-full overflow-hidden bg-white/40 backdrop-blur-md text-blue-900 flex justify-center items-center text-6xl font-black font-mono left-1/2 -translate-x-1/2 2xl:w-20 2xl:h-20 pb-1">
             +
           </button>
           <div className="flex space-x-[40px] items-center">
