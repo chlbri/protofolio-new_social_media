@@ -92,7 +92,7 @@ const Message: FC = () => {
               <div className="bg-white rounded-full flex space-x-2 pl-5 flex-grow justify-center">
                 <input
                   type="text"
-                  className="hover:outline-none focus:outline-none bg-transparent w-min"
+                  className="hover:outline-none focus:outline-none bg-transparent flex-grow"
                 />
                 <div className="bg-blue-500 p-3 rounded-full max-w">
                   <Icon_SendMessage />
