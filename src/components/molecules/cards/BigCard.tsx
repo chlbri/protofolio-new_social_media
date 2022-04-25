@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { FC } from 'react';
 import {
   Icon_BookMark,
@@ -14,14 +15,27 @@ type Props = {
   pseudo?: string;
 };
 
+function useHook() {
+  const { push } = useRouter();
+  const handlePersonClick = () => {
+    push('/person');
+  };
+  return handlePersonClick;
+}
+
 export const BigCard: FC<Props> = ({
   profileImage,
   lastPhoto,
   name = 'Jane Doe',
   pseudo = '@JaneJ01',
 }) => {
+  const handlePersonClick = useHook();
+
   return (
-    <div className="last:pb-[70%]">
+    <div
+      className="last:pb-[70%] cursor-pointer"
+      onClick={handlePersonClick}
+    >
       <div className="rounded-[2rem] bg-slate-200 flex flex-col py-2 px-2 space-y-3 overflow-hidden">
         <header className="flex space-x-3 pl-2">
           <Image
@@ -40,7 +54,7 @@ export const BigCard: FC<Props> = ({
             className="w-full aspect-[3/2] rounded-[2rem] overflow-hidden"
             src={lastPhoto}
           />
-          <div className="absolute inset-x-6 bottom-2 text-white flex justify-between text-sm z-20">
+          <div className="absolute inset-x-6 bottom-2 text-white flex justify-between text-sm z-10">
             <div className="flex space-x-3">
               <div className="flex space-x-0.5 items-center">
                 <Icon_Message className="fill-white" width={1.5} />

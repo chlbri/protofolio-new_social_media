@@ -13,16 +13,19 @@ function useStart() {
 }
 
 function useHook() {
-  const { push } = useRouter();
+  const { push, back } = useRouter();
   const handleBackClick = () => {
-    push('/');
+    back();
+  };
+  const handleMessagelick = () => {
+    push('/message');
   };
   useStart();
-  return handleBackClick;
+  return { handleBackClick, handleMessagelick };
 }
 
 const Person: FC = () => {
-  const handleBackClick = useHook();
+  const { handleBackClick, handleMessagelick } = useHook();
   return (
     <Page className="bg-pastel overflow-y-hidden relative flex flex-col space-y-24 pb-2">
       <header className="top-4 sticky px-4 flex justify-between z-50">
@@ -59,10 +62,16 @@ const Person: FC = () => {
               stuffs.
             </p>
             <div className="w-11/12 flex space-x-5 text-sm">
-              <button className="shadow-lg flex-1 bg-blue-500 text-white rounded-full shadow-blue-300 ">
+              <button
+                className="shadow-lg flex-1 bg-blue-500 text-white rounded-full shadow-blue-300"
+                onClick={handleBackClick}
+              >
                 Follow
               </button>
-              <button className="shadow-lg flex-1 py-2 rounded-full bg-white ">
+              <button
+                className="shadow-lg flex-1 py-2 rounded-full bg-white"
+                onClick={handleMessagelick}
+              >
                 Message
               </button>
             </div>

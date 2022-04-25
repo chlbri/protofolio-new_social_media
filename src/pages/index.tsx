@@ -9,6 +9,7 @@ import {
 } from '../components/atoms';
 import { Page } from '../components/layouts';
 import { BigCard, SmallAvatar } from '../components/molecules';
+import { Footer } from '../components/organisms';
 import { useSend } from '../Provider';
 
 function useStart() {
@@ -59,7 +60,7 @@ const Index: FC = () => {
           </div>
         </div>
       </main>
-      <footer className="absolute bottom-0 h-24 left-0 right-0 bg-indigo-300/60 backdrop-blur-xl flex rounded-b-[2rem]"></footer>
+      <Footer />
     </Page>
   );
 };
